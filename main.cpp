@@ -4,21 +4,21 @@ constexpr int N_ELEMENTS = 100;
 
 int main()
 {
-    int *b = new int[NELEMENTS]; // NELEMENTS helyett N_ELEMENTS nek kéne a változót nevezni
-    std::cout << '1-100 ertekek duplazasa' // ' ' helyett " " közé kellene rakni az std::cout << utáni szöveget, pontosvesszõ hiányzik a végén
-    for (int i = 0;) // Hibás a ciklus így nem fog jól lefutni, (i <N_ELEMENTS ) lenne helyes
+    int *b = new int[N_ELEMENTS]; 
+    std::cout << "1-100 ertekek duplazasa"; 
+    for (int i < N_ELEMENTS) 
     {
         b[i] = i * 2;
     }
-    for (int i = 0; i; i++) // (i <N_ELEMENTS ) lenne helyes az i inicializálásánál
+    for (int i = 0; i<N_ELEMENTS; i++) 
     {
-        std::cout << "Ertek:" // nem irja ki az értéket és pontosvesszõ sincs
+        std::cout << "Ertek:" << i; 
     }    
     std::cout << "Atlag szamitasa: " << std::endl;
-    int atlag; // nincs inicializálva a változó
-    for (int i = 0; i < N_ELEMENTS, i++) // ';'-nek kell lennie a for ciklus feltételeit elválasztó karakternek ,nem ','
+    int atlag=0; 
+    for (int i = 0; i < N_ELEMENTS; i++) 
     {
-        atlag += b[i] // ';' a sor végén hiányzik
+        atlag += b[i]; 
     }
     atlag /= N_ELEMENTS;
     std::cout << "Atlag: " << atlag << std::endl;
