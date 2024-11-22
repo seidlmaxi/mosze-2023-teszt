@@ -22,5 +22,9 @@ int main()
     }
     atlag /= N_ELEMENTS;
     std::cout << "Atlag: " << atlag << std::endl;
+
+    //memória felszabadítása
+    delete[] b;
+
     return 0;
 }
